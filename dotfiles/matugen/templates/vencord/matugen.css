@@ -1,0 +1,1457 @@
+/**
+ * @name Matugen
+ * @description Matugen theme for Discord.
+ * @author luxfall
+ * @version 1.0.0
+ */
+
+/* ===== theme-dark ===== */
+
+.visual-refresh.theme-dark,
+.visual-refresh .theme-dark {
+  --mu-surface-lowest: {{colors.surface_container_lowest.dark.hex}};
+  --mu-surface-low: {{colors.surface_container_low.dark.hex}};
+  --mu-surface: {{colors.surface_container.dark.hex}};
+  --mu-surface-high: {{colors.surface_container_high.dark.hex}};
+  --mu-surface-highest: {{colors.surface_container_highest.dark.hex}};
+  --mu-on-surface: {{colors.on_surface.dark.hex}};
+  --mu-on-surface-variant: {{colors.on_surface_variant.dark.hex}};
+  --mu-outline: {{colors.outline.dark.hex}};
+  --mu-outline-variant: {{colors.outline_variant.dark.hex}};
+  --mu-primary: {{colors.primary.dark.hex}};
+  --mu-on-primary: {{colors.on_primary.dark.hex}};
+  --mu-primary-container: {{colors.primary_container.dark.hex}};
+  --mu-on-primary-container: {{colors.on_primary_container.dark.hex}};
+  --mu-secondary: {{colors.secondary.dark.hex}};
+  --mu-secondary-container: {{colors.secondary_container.dark.hex}};
+  --mu-on-secondary-container: {{colors.on_secondary_container.dark.hex}};
+  --mu-tertiary: {{colors.tertiary.dark.hex}};
+  --mu-on-tertiary: {{colors.on_tertiary.dark.hex}};
+  --mu-error: {{colors.error.dark.hex}};
+  --mu-on-error: {{colors.on_error.dark.hex}};
+  --mu-error-container: {{colors.error_container.dark.hex}};
+  --mu-success: {{colors.success.dark.hex}};
+  --mu-on-success: {{colors.on_success.dark.hex}};
+  --mu-warning: {{colors.warning.dark.hex}};
+  --mu-on-warning: {{colors.on_warning.dark.hex}};
+  --mu-blue: {{colors.ansi_blue.dark.hex}};
+  --mu-magenta: {{colors.ansi_magenta.dark.hex}};
+  --mu-cyan: {{colors.ansi_cyan.dark.hex}};
+  --mu-shadow: {{colors.shadow.dark.hex}};
+
+  --brand-100: color-mix(in srgb, var(--mu-primary) 10%, white);
+  --brand-130: color-mix(in srgb, var(--mu-primary) 18%, white);
+  --brand-160: color-mix(in srgb, var(--mu-primary) 28%, white);
+  --brand-200: color-mix(in srgb, var(--mu-primary) 38%, white);
+  --brand-230: color-mix(in srgb, var(--mu-primary) 48%, white);
+  --brand-260: color-mix(in srgb, var(--mu-primary) 58%, white);
+  --brand-300: color-mix(in srgb, var(--mu-primary) 68%, white);
+  --brand-330: color-mix(in srgb, var(--mu-primary) 76%, white);
+  --brand-360: color-mix(in srgb, var(--mu-primary) 84%, white);
+  --brand-400: color-mix(in srgb, var(--mu-primary) 90%, white);
+  --brand-430: color-mix(in srgb, var(--mu-primary) 94%, white);
+  --brand-460: color-mix(in srgb, var(--mu-primary) 97%, white);
+  --brand-500: var(--mu-primary);
+  --brand-530: color-mix(in srgb, var(--mu-primary) 94%, black);
+  --brand-560: color-mix(in srgb, var(--mu-primary) 86%, black);
+  --brand-600: color-mix(in srgb, var(--mu-primary) 76%, black);
+  --brand-630: color-mix(in srgb, var(--mu-primary) 66%, black);
+  --brand-660: color-mix(in srgb, var(--mu-primary) 56%, black);
+  --brand-700: color-mix(in srgb, var(--mu-primary) 46%, black);
+  --brand-730: color-mix(in srgb, var(--mu-primary) 40%, black);
+  --brand-760: color-mix(in srgb, var(--mu-primary) 34%, black);
+  --brand-800: color-mix(in srgb, var(--mu-primary) 28%, black);
+  --brand-830: color-mix(in srgb, var(--mu-primary) 22%, black);
+  --brand-860: color-mix(in srgb, var(--mu-primary) 16%, black);
+  --brand-900: color-mix(in srgb, var(--mu-primary) 10%, black);
+  --brand-05a: color-mix(in srgb, var(--mu-primary) 5%, transparent);
+  --brand-10a: color-mix(in srgb, var(--mu-primary) 10%, transparent);
+  --brand-15a: color-mix(in srgb, var(--mu-primary) 15%, transparent);
+  --brand-20a: color-mix(in srgb, var(--mu-primary) 20%, transparent);
+  --brand-25a: color-mix(in srgb, var(--mu-primary) 25%, transparent);
+  --brand-30a: color-mix(in srgb, var(--mu-primary) 30%, transparent);
+  --brand-35a: color-mix(in srgb, var(--mu-primary) 35%, transparent);
+  --brand-40a: color-mix(in srgb, var(--mu-primary) 40%, transparent);
+  --brand-45a: color-mix(in srgb, var(--mu-primary) 45%, transparent);
+  --brand-50a: color-mix(in srgb, var(--mu-primary) 50%, transparent);
+  --brand-55a: color-mix(in srgb, var(--mu-primary) 55%, transparent);
+  --brand-60a: color-mix(in srgb, var(--mu-primary) 60%, transparent);
+  --brand-65a: color-mix(in srgb, var(--mu-primary) 65%, transparent);
+  --brand-70a: color-mix(in srgb, var(--mu-primary) 70%, transparent);
+  --brand-75a: color-mix(in srgb, var(--mu-primary) 75%, transparent);
+  --brand-80a: color-mix(in srgb, var(--mu-primary) 80%, transparent);
+  --brand-85a: color-mix(in srgb, var(--mu-primary) 85%, transparent);
+  --brand-90a: color-mix(in srgb, var(--mu-primary) 90%, transparent);
+  --brand-95a: color-mix(in srgb, var(--mu-primary) 95%, transparent);
+  --__header-bar-background: var(--mu-surface-highest);
+  --app-frame-background: var(--mu-surface-highest);
+  --background-base-lowest: var(--mu-surface-highest);
+  --background-base-lower: var(--mu-surface-high);
+  --background-base-low: var(--mu-surface);
+  --background-surface-high: var(--mu-surface-low);
+  --background-surface-higher: var(--mu-surface);
+  --background-surface-highest: var(--mu-surface-high);
+  --background-secondary-alt: var(--mu-surface);
+  --background-accent: var(--mu-secondary-container);
+  --bg-surface-raised: var(--mu-surface);
+  --background-gradient-highest: var(--mu-surface);
+  --home-background: var(--mu-surface-low);
+  --chat-background: var(--mu-surface-low);
+  --chat-background-default: var(--mu-surface-low);
+  --plum-23: var(--mu-surface-low);
+  --background-code: var(--mu-surface-lowest);
+  --custom-channel-members-bg: var(--mu-surface-high);
+  --custom-status-bubble-background: var(--mu-surface-lowest);
+  --custom-status-bubble-background-color: var(--mu-surface);
+  --card-background-default: var(--mu-surface-high);
+  --channeltextarea-background: var(--mu-surface);
+  --modal-background: var(--mu-surface);
+  --modal-footer-background: var(--mu-surface-high);
+  --user-profile-overlay-background: var(--mu-surface);
+  --user-profile-overlay-background-hover: var(--mu-surface-highest);
+  --input-background-default: var(--mu-surface-lowest);
+  --chat-border: color-mix(in srgb, var(--mu-outline-variant) 50%, transparent);
+  --border-muted: color-mix(in srgb, var(--mu-outline-variant) 60%, transparent);
+  --border-normal: color-mix(in srgb, var(--mu-outline-variant) 80%, transparent);
+  --border-strong: var(--mu-outline-variant);
+  --border-subtle: color-mix(in srgb, var(--mu-outline-variant) 35%, transparent);
+  --text-default: var(--mu-on-surface);
+  --text-strong: var(--mu-on-surface);
+  --text-muted: var(--mu-on-surface-variant);
+  --text-subtle: var(--mu-on-surface-variant);
+  --chat-text-muted: var(--mu-on-surface-variant);
+  --text-link: var(--mu-tertiary);
+  --text-brand: var(--mu-primary);
+  --text-feedback-positive: var(--mu-success);
+  --text-feedback-critical: var(--mu-error);
+  --text-feedback-warning: var(--mu-warning);
+  --text-feedback-info: var(--mu-cyan);
+  --channels-default: var(--mu-on-surface-variant);
+  --channel-icon: var(--mu-on-surface-variant);
+  --channel-text-area-placeholder: color-mix(in srgb, var(--mu-on-surface) 50%, transparent);
+  --input-text-default: var(--mu-on-surface);
+  --input-placeholder-text-default: var(--mu-on-surface-variant);
+  --input-border-default: var(--mu-outline);
+  --logo-primary: var(--mu-on-surface);
+  --white: var(--mu-on-surface);
+  --white-500: var(--mu-on-surface);
+  --black-500: var(--mu-surface-lowest);
+  --primary-100: var(--mu-on-surface-variant);
+  --primary-200: var(--mu-on-surface-variant);
+  --primary-300: var(--mu-on-surface-variant);
+  --primary-400: var(--mu-on-surface-variant);
+  --primary-630: var(--mu-surface-high);
+  --primary-700: var(--mu-surface-highest);
+  --primary-800: var(--mu-surface-lowest);
+  --icon-default: var(--mu-on-surface);
+  --icon-strong: var(--mu-on-surface);
+  --icon-subtle: var(--mu-on-surface-variant);
+  --icon-muted: var(--mu-on-surface-variant);
+  --icon-voice-muted: var(--mu-error);
+  --textbox-markdown-syntax: var(--mu-outline);
+  --interactive-icon-default: var(--mu-on-surface-variant);
+  --interactive-text-default: var(--mu-on-surface-variant);
+  --interactive-icon-hover: var(--mu-on-surface);
+  --interactive-icon-active: var(--mu-on-primary-container);
+  --interactive-text-hover: var(--mu-on-surface);
+  --interactive-text-active: var(--mu-on-primary-container);
+  --interactive-muted: var(--mu-outline);
+  --interactive-background-hover: color-mix(in srgb, var(--mu-on-surface) 8%, transparent);
+  --interactive-background-selected: var(--mu-primary-container);
+  --interactive-background-active: color-mix(in srgb, var(--mu-on-surface) 14%, transparent);
+  --background-mod-muted: color-mix(in srgb, var(--mu-on-surface-variant) 5%, transparent);
+  --background-mod-normal: color-mix(in srgb, var(--mu-on-surface-variant) 10%, transparent);
+  --background-mod-subtle: color-mix(in srgb, var(--mu-on-surface-variant) 16%, transparent);
+  --background-mod-strong: color-mix(in srgb, var(--mu-on-surface-variant) 28%, transparent);
+  --__adaptive-focus-ring-color: var(--mu-primary);
+  --message-reacted-background-default: color-mix(in srgb, var(--mu-primary) 24%, transparent);
+  --message-reacted-text-default: var(--mu-primary);
+  --mention-foreground: var(--mu-primary);
+  --mention-background: color-mix(in srgb, var(--mu-primary) 24%, transparent);
+  --message-mentioned-background-default: color-mix(in srgb, var(--mu-warning) 10%, transparent);
+  --message-mentioned-background-hover: color-mix(in srgb, var(--mu-warning) 8%, transparent);
+  --message-background-hover: color-mix(in srgb, var(--mu-on-surface) 5%, transparent);
+  --message-automod-background-default: color-mix(in srgb, var(--mu-error) 5%, transparent);
+  --message-automod-background-hover: color-mix(in srgb, var(--mu-error) 10%, transparent);
+  --message-highlight-background-default: color-mix(in srgb, var(--mu-primary) 8%, transparent);
+  --message-highlight-background-hover: color-mix(in srgb, var(--mu-primary) 6%, transparent);
+  --spoiler-revealed-background: var(--mu-surface-high);
+  --spoiler-hidden-background: var(--mu-surface-highest);
+  --__spoiler-background-color--hidden: var(--mu-surface-highest);
+  --__spoiler-warning-background-color: color-mix(in srgb, var(--mu-surface-highest) 85%, var(--mu-on-surface));
+  --opacity-blurple-8: color-mix(in srgb, var(--mu-primary) 8%, transparent);
+  --opacity-blurple-16: color-mix(in srgb, var(--mu-primary) 16%, transparent);
+  --opacity-blurple-24: color-mix(in srgb, var(--mu-primary) 24%, transparent);
+  --opacity-blurple-32: color-mix(in srgb, var(--mu-primary) 32%, transparent);
+  --opacity-blurple-60: color-mix(in srgb, var(--mu-primary) 60%, transparent);
+  --blurple-50: var(--mu-primary);
+  --blurple-60: color-mix(in srgb, var(--mu-primary) 85%, var(--mu-on-surface));
+  --background-feedback-positive: color-mix(in srgb, var(--mu-success) 15%, transparent);
+  --icon-feedback-positive: var(--mu-success);
+  --background-feedback-warning: color-mix(in srgb, var(--mu-warning) 15%, transparent);
+  --icon-feedback-warning: var(--mu-warning);
+  --background-feedback-critical: color-mix(in srgb, var(--mu-error) 15%, transparent);
+  --icon-feedback-critical: var(--mu-error);
+  --background-feedback-info: color-mix(in srgb, var(--mu-cyan) 15%, transparent);
+  --icon-feedback-info: var(--mu-cyan);
+  --background-feedback-notification: var(--mu-error);
+  --icon-feedback-notification: var(--mu-error);
+  --badge-notification-background: var(--mu-error);
+  --status-positive: var(--mu-success);
+  --status-positive-background: var(--mu-success);
+  --status-positive-text: var(--mu-on-success);
+  --status-warning: var(--mu-warning);
+  --status-warning-background: var(--mu-warning);
+  --status-warning-text: var(--mu-on-warning);
+  --status-danger: var(--mu-error);
+  --green-360: var(--mu-success);
+  --green-300: var(--mu-success);
+  --yellow-360: var(--mu-warning);
+  --yellow-300: var(--mu-warning);
+  --red-400: var(--mu-error);
+  --red-430: color-mix(in srgb, var(--mu-error) 88%, var(--mu-on-surface));
+  --red-500: color-mix(in srgb, var(--mu-error) 76%, var(--mu-on-surface));
+  --blue-500: var(--mu-blue);
+  --blue-530: color-mix(in srgb, var(--mu-blue) 88%, var(--mu-on-surface));
+  --text-status-online: var(--mu-success);
+  --icon-status-online: var(--mu-success);
+  --text-status-idle: var(--mu-warning);
+  --icon-status-idle: var(--mu-warning);
+  --text-status-dnd: var(--mu-error);
+  --icon-status-dnd: var(--mu-error);
+  --text-status-offline: var(--mu-outline);
+  --icon-status-offline: var(--mu-outline);
+  --twitch: var(--mu-magenta);
+  --playstation: var(--mu-blue);
+  --spotify: var(--mu-success);
+  --notice-background-critical: var(--mu-error);
+  --notice-text-critical: var(--mu-on-error);
+  --notice-background-info: var(--mu-primary);
+  --notice-text-info: var(--mu-on-primary);
+  --notice-background-positive: var(--mu-success);
+  --notice-text-positive: var(--mu-on-success);
+  --notice-background-warning: var(--mu-warning);
+  --notice-text-warning: var(--mu-on-warning);
+  --badge-text-brand: var(--mu-on-primary);
+  --checkbox-icon-active: var(--mu-on-primary);
+  --radio-thumb-background-active: var(--mu-on-primary);
+  --checkbox-border-default: var(--mu-outline);
+  --guild-boosting-pink: var(--mu-magenta);
+  --guild-boosting-blue: var(--mu-blue);
+  --guild-boosting-purple: var(--mu-tertiary);
+  --premium-perk-yellow: var(--mu-warning);
+  --premium-perk-purple: var(--mu-magenta);
+  --premium-perk-dark-blue: color-mix(in srgb, var(--mu-blue) 85%, var(--mu-on-surface));
+  --premium-perk-light-blue: var(--mu-cyan);
+  --premium-perk-blue: var(--mu-blue);
+  --premium-perk-green: var(--mu-success);
+  --premium-perk-pink: var(--mu-magenta);
+  --premium-perk-orange: color-mix(in srgb, var(--mu-warning) 60%, var(--mu-error));
+  --premium-tier-0-blue: var(--mu-blue);
+  --premium-tier-0-purple: var(--mu-magenta);
+  --premium-tier-1-blue-for-gradients: var(--mu-cyan);
+  --premium-tier-1-dark-blue-for-gradients: var(--mu-blue);
+  --premium-tier-2-purple-for-gradients: color-mix(in srgb, var(--mu-magenta) 85%, var(--mu-on-surface));
+  --premium-tier-2-purple-for-gradients-2: var(--mu-magenta);
+  --premium-tier-2-pink-for-gradients: var(--mu-magenta);
+  --control-primary-background-default: var(--mu-primary);
+  --control-primary-background-hover: color-mix(in srgb, var(--mu-primary) 88%, var(--mu-on-surface));
+  --control-primary-background-active: color-mix(in srgb, var(--mu-primary) 76%, var(--mu-on-surface));
+  --control-secondary-background-default: var(--mu-secondary-container);
+  --control-secondary-background-hover: color-mix(in srgb, var(--mu-secondary-container) 88%, var(--mu-on-secondary-container));
+  --control-secondary-background-active: color-mix(in srgb, var(--mu-secondary-container) 78%, var(--mu-on-secondary-container));
+  --control-secondary-border-default: var(--mu-outline-variant);
+  --control-secondary-text-default: var(--mu-on-secondary-container);
+  --control-secondary-text-hover: var(--mu-on-secondary-container);
+  --control-critical-primary-background-default: var(--mu-error);
+  --control-critical-primary-background-hover: color-mix(in srgb, var(--mu-error) 88%, var(--mu-on-surface));
+  --control-critical-primary-background-active: color-mix(in srgb, var(--mu-error) 76%, var(--mu-on-surface));
+  --control-critical-primary-text-default: var(--mu-on-error);
+  --control-critical-primary-text-hover: var(--mu-on-error);
+  --control-critical-secondary-background-default: transparent;
+  --control-critical-secondary-background-hover: var(--mu-error);
+  --control-critical-secondary-background-active: color-mix(in srgb, var(--mu-error) 88%, var(--mu-on-surface));
+  --control-critical-secondary-border-default: var(--mu-error);
+  --control-critical-secondary-border-hover: var(--mu-error);
+  --control-critical-secondary-border-active: var(--mu-error);
+  --control-critical-secondary-text-default: var(--mu-on-surface);
+  --control-critical-secondary-text-hover: var(--mu-on-error);
+  --control-critical-secondary-text-active: var(--mu-on-error);
+  --control-connected-background-default: var(--mu-success);
+  --control-connected-background-hover: color-mix(in srgb, var(--mu-success) 88%, var(--mu-on-surface));
+  --control-connected-background-active: color-mix(in srgb, var(--mu-success) 76%, var(--mu-on-surface));
+  --control-connected-border-default: var(--mu-success);
+  --control-connected-border-hover: var(--mu-success);
+  --control-connected-border-active: var(--mu-success);
+  --control-brand-foreground: var(--mu-primary);
+  --control-brand-foreground-new: var(--mu-primary);
+  --button-outline-primary-text: var(--mu-on-surface);
+  --button-outline-brand-text: var(--mu-on-surface);
+  --button-outline-brand-background-hover: color-mix(in srgb, var(--mu-primary) 88%, var(--mu-on-surface));
+  --button-outline-brand-border-active: color-mix(in srgb, var(--mu-primary) 88%, var(--mu-on-surface));
+  --scrollbar-thin-thumb: color-mix(in srgb, var(--mu-outline) 60%, transparent);
+  --scrollbar-auto-thumb: color-mix(in srgb, var(--mu-outline) 60%, transparent);
+  --scrollbar-auto-scrollbar-color-thumb: color-mix(in srgb, var(--mu-outline) 60%, transparent);
+  --scrollbar-thin-track: transparent;
+  --scrollbar-auto-track: transparent;
+  --scrollbar-auto-scrollbar-color-track: transparent;
+}
+
+.visual-refresh.theme-dark ::selection,
+.visual-refresh .theme-dark ::selection {
+  background-color: var(--mu-primary-container);
+  color: var(--mu-on-primary-container);
+}
+
+.visual-refresh.theme-dark div[class^=numberBadge_],
+.visual-refresh .theme-dark div[class^=numberBadge_],
+.visual-refresh.theme-dark div[class*=iconBadge_][class*=isCurrentUserConnected_],
+.visual-refresh .theme-dark div[class*=iconBadge_][class*=isCurrentUserConnected_],
+.visual-refresh.theme-dark span[class*=botTag_],
+.visual-refresh .theme-dark span[class*=botTag_],
+.visual-refresh.theme-dark span[class^=unreadPill_],
+.visual-refresh .theme-dark span[class^=unreadPill_],
+.visual-refresh.theme-dark div[class^=newBadge_],
+.visual-refresh .theme-dark div[class^=newBadge_],
+.visual-refresh.theme-dark div[class*=textBadge_][class*=base_],
+.visual-refresh .theme-dark div[class*=textBadge_][class*=base_],
+.visual-refresh.theme-dark button[class*=button_][class*=lookFilled_][class*=colorRed_],
+.visual-refresh .theme-dark button[class*=button_][class*=lookFilled_][class*=colorRed_],
+.visual-refresh.theme-dark button[class*=button_][class*=lookFilled_][class*=colorGreen_],
+.visual-refresh .theme-dark button[class*=button_][class*=lookFilled_][class*=colorGreen_],
+.visual-refresh.theme-dark button[class*=button_][class*=lookFilled_][class*=colorLink_],
+.visual-refresh .theme-dark button[class*=button_][class*=lookFilled_][class*=colorLink_],
+.visual-refresh.theme-dark button[class*=button_][class*=lookFilled_][class*=colorBrand_],
+.visual-refresh .theme-dark button[class*=button_][class*=lookFilled_][class*=colorBrand_],
+.visual-refresh.theme-dark button[class*=colorable_][class*=join_],
+.visual-refresh .theme-dark button[class*=colorable_][class*=join_],
+.visual-refresh.theme-dark div[class*=tooltipBrand_],
+.visual-refresh .theme-dark div[class*=tooltipBrand_],
+.visual-refresh.theme-dark div[class*=tooltipGreen_],
+.visual-refresh .theme-dark div[class*=tooltipGreen_],
+.visual-refresh.theme-dark div[class*=memberCount_],
+.visual-refresh .theme-dark div[class*=memberCount_],
+.visual-refresh.theme-dark div[class*=nowPlaying_],
+.visual-refresh .theme-dark div[class*=nowPlaying_],
+.visual-refresh.theme-dark [class*=notice_][class*=colorBrand_],
+.visual-refresh .theme-dark [class*=notice_][class*=colorBrand_],
+.visual-refresh.theme-dark [class*=colorStreamerMode_],
+.visual-refresh .theme-dark [class*=colorStreamerMode_],
+.visual-refresh.theme-dark [class*=colorSpotify_],
+.visual-refresh .theme-dark [class*=colorSpotify_],
+.visual-refresh.theme-dark [class*=colorPremium_],
+.visual-refresh .theme-dark [class*=colorPremium_],
+.visual-refresh.theme-dark [class*=colorPlayStation_],
+.visual-refresh .theme-dark [class*=colorPlayStation_] {
+  --white: var(--mu-on-primary);
+  --white-500: var(--mu-on-primary);
+}
+
+.visual-refresh.theme-dark button[class*=button_][class*=lookFilled_][class*=colorBrand_]:not(:has(>div>div[class*=buttonIcon_])),
+.visual-refresh .theme-dark button[class*=button_][class*=lookFilled_][class*=colorBrand_]:not(:has(>div>div[class*=buttonIcon_])) {
+  color: var(--mu-on-primary) !important;
+}
+
+.visual-refresh.theme-dark button.vc-btn-primary,
+.visual-refresh .theme-dark button.vc-btn-primary,
+.visual-refresh.theme-dark button[class^=button_][class*=" primary_"],
+.visual-refresh .theme-dark button[class^=button_][class*=" primary_"] {
+  color: var(--mu-on-primary) !important;
+  background-color: var(--mu-primary) !important;
+}
+
+.visual-refresh.theme-dark button.vc-btn-primary:hover,
+.visual-refresh .theme-dark button.vc-btn-primary:hover,
+.visual-refresh.theme-dark button[class^=button_][class*=" primary_"]:hover,
+.visual-refresh .theme-dark button[class^=button_][class*=" primary_"]:hover {
+  background-color: color-mix(in srgb, var(--mu-primary) 88%, var(--mu-on-surface)) !important;
+}
+
+.visual-refresh.theme-dark button.vc-btn-primary:active,
+.visual-refresh .theme-dark button.vc-btn-primary:active,
+.visual-refresh.theme-dark button[class^=button_][class*=" primary_"]:active,
+.visual-refresh .theme-dark button[class^=button_][class*=" primary_"]:active {
+  background-color: color-mix(in srgb, var(--mu-primary) 76%, var(--mu-on-surface)) !important;
+}
+
+.visual-refresh.theme-dark [style*="color: white"],
+.visual-refresh .theme-dark [style*="color: white"] {
+  color: var(--white) !important;
+}
+
+.visual-refresh.theme-dark div[class*=button_][class*=dangerous_],
+.visual-refresh .theme-dark div[class*=button_][class*=dangerous_] {
+  color: var(--mu-error);
+}
+
+.visual-refresh.theme-dark div[class^=newMessagesBar_],
+.visual-refresh .theme-dark div[class^=newMessagesBar_] {
+  --white: var(--mu-on-primary);
+  --control-secondary-background-default: var(--brand-500);
+  --control-secondary-background-hover: var(--brand-530);
+}
+
+.visual-refresh.theme-dark svg [fill="#45a366"],
+.visual-refresh .theme-dark svg [fill="#45a366"],
+.visual-refresh.theme-dark svg[fill="#45a366"],
+.visual-refresh .theme-dark svg[fill="#45a366"] {
+  fill: var(--mu-success);
+}
+
+.visual-refresh.theme-dark div[style="background-color: rgb(69, 163, 102);"],
+.visual-refresh .theme-dark div[style="background-color: rgb(69, 163, 102);"] {
+  background-color: var(--mu-success) !important;
+}
+
+.visual-refresh.theme-dark svg [fill="#ffc04e"],
+.visual-refresh .theme-dark svg [fill="#ffc04e"],
+.visual-refresh.theme-dark svg[fill="#ffc04e"],
+.visual-refresh .theme-dark svg[fill="#ffc04e"] {
+  fill: var(--mu-warning);
+}
+
+.visual-refresh.theme-dark div[style="background-color: rgb(255, 192, 78);"],
+.visual-refresh .theme-dark div[style="background-color: rgb(255, 192, 78);"] {
+  background-color: var(--mu-warning) !important;
+}
+
+.visual-refresh.theme-dark svg [fill="#da3e44"],
+.visual-refresh .theme-dark svg [fill="#da3e44"],
+.visual-refresh.theme-dark svg[fill="#da3e44"],
+.visual-refresh .theme-dark svg[fill="#da3e44"] {
+  fill: var(--mu-error);
+}
+
+.visual-refresh.theme-dark div[style="background-color: rgb(218, 62, 68);"],
+.visual-refresh .theme-dark div[style="background-color: rgb(218, 62, 68);"] {
+  background-color: var(--mu-error) !important;
+}
+
+.visual-refresh.theme-dark svg [fill="#84858d"],
+.visual-refresh .theme-dark svg [fill="#84858d"],
+.visual-refresh.theme-dark svg[fill="#84858d"],
+.visual-refresh .theme-dark svg[fill="#84858d"] {
+  fill: var(--mu-outline);
+}
+
+.visual-refresh.theme-dark div[style="background-color: rgb(132, 133, 141);"],
+.visual-refresh .theme-dark div[style="background-color: rgb(132, 133, 141);"] {
+  background-color: var(--mu-outline) !important;
+}
+
+.visual-refresh.theme-dark svg [fill="#9147ff"],
+.visual-refresh .theme-dark svg [fill="#9147ff"],
+.visual-refresh.theme-dark svg[fill="#9147ff"],
+.visual-refresh .theme-dark svg[fill="#9147ff"] {
+  fill: var(--mu-magenta);
+}
+
+.visual-refresh.theme-dark div[style="background-color: rgb(145, 71, 255);"],
+.visual-refresh .theme-dark div[style="background-color: rgb(145, 71, 255);"] {
+  background-color: var(--mu-magenta) !important;
+}
+
+.visual-refresh.theme-dark label[class^=container_]>div[data-mana-component=switch],
+.visual-refresh .theme-dark label[class^=container_]>div[data-mana-component=switch] {
+  background-color: var(--mu-outline-variant) !important;
+  border: unset !important;
+  transition: background-color .2s;
+}
+
+.visual-refresh.theme-dark label[class^=container_]>div[data-mana-component=switch]:hover,
+.visual-refresh .theme-dark label[class^=container_]>div[data-mana-component=switch]:hover {
+  background-color: color-mix(in srgb, var(--mu-outline-variant) 80%, var(--mu-on-surface)) !important;
+}
+
+.visual-refresh.theme-dark label[class^=container_]>div[data-mana-component=switch]>svg>rect,
+.visual-refresh .theme-dark label[class^=container_]>div[data-mana-component=switch]>svg>rect {
+  fill: var(--mu-on-surface);
+  transition: fill .2s;
+}
+
+.visual-refresh.theme-dark label[class^=container_]>div[data-mana-component=switch]:has(+span>input:checked),
+.visual-refresh .theme-dark label[class^=container_]>div[data-mana-component=switch]:has(+span>input:checked) {
+  background-color: var(--mu-primary) !important;
+}
+
+.visual-refresh.theme-dark label[class^=container_]>div[data-mana-component=switch]:has(+span>input:checked):hover,
+.visual-refresh .theme-dark label[class^=container_]>div[data-mana-component=switch]:has(+span>input:checked):hover {
+  background-color: color-mix(in srgb, var(--mu-primary) 88%, var(--mu-on-surface)) !important;
+}
+
+.visual-refresh.theme-dark label[class^=container_]>div[data-mana-component=switch]:has(+span>input:checked)>svg>rect,
+.visual-refresh .theme-dark label[class^=container_]>div[data-mana-component=switch]:has(+span>input:checked)>svg>rect {
+  fill: var(--mu-on-primary);
+}
+
+.visual-refresh.theme-dark div.vc-switch-container,
+.visual-refresh .theme-dark div.vc-switch-container {
+  --primary-400: var(--mu-outline-variant);
+}
+
+.visual-refresh.theme-dark div.vc-switch-container svg.vc-switch-slider>rect,
+.visual-refresh .theme-dark div.vc-switch-container svg.vc-switch-slider>rect {
+  fill: var(--mu-on-surface);
+  transition: fill .2s;
+}
+
+.visual-refresh.theme-dark div.vc-switch-container.vc-switch-checked>svg.vc-switch-slider>rect,
+.visual-refresh .theme-dark div.vc-switch-container.vc-switch-checked>svg.vc-switch-slider>rect {
+  fill: var(--mu-on-primary);
+}
+
+.visual-refresh.theme-dark.hljs,
+.visual-refresh .theme-dark.hljs {
+  color: var(--mu-on-surface);
+  background: var(--mu-surface-lowest);
+}
+
+.visual-refresh.theme-dark .hljs-keyword,
+.visual-refresh .theme-dark .hljs-keyword {
+  color: var(--mu-magenta);
+}
+
+.visual-refresh.theme-dark .hljs-built_in,
+.visual-refresh .theme-dark .hljs-built_in {
+  color: var(--mu-error);
+}
+
+.visual-refresh.theme-dark .hljs-type,
+.visual-refresh .theme-dark .hljs-type {
+  color: var(--mu-warning);
+}
+
+.visual-refresh.theme-dark .hljs-literal,
+.visual-refresh .theme-dark .hljs-literal {
+  color: var(--mu-warning);
+}
+
+.visual-refresh.theme-dark .hljs-number,
+.visual-refresh .theme-dark .hljs-number {
+  color: var(--mu-warning);
+}
+
+.visual-refresh.theme-dark .hljs-operator,
+.visual-refresh .theme-dark .hljs-operator {
+  color: var(--mu-cyan);
+}
+
+.visual-refresh.theme-dark .hljs-punctuation,
+.visual-refresh .theme-dark .hljs-punctuation {
+  color: var(--mu-on-surface-variant);
+}
+
+.visual-refresh.theme-dark .hljs-property,
+.visual-refresh .theme-dark .hljs-property {
+  color: var(--mu-cyan);
+}
+
+.visual-refresh.theme-dark .hljs-regexp,
+.visual-refresh .theme-dark .hljs-regexp {
+  color: var(--mu-magenta);
+}
+
+.visual-refresh.theme-dark .hljs-string,
+.visual-refresh .theme-dark .hljs-string {
+  color: var(--mu-success);
+}
+
+.visual-refresh.theme-dark .hljs-char.escape_,
+.visual-refresh .theme-dark .hljs-char.escape_ {
+  color: var(--mu-cyan);
+}
+
+.visual-refresh.theme-dark .hljs-subst,
+.visual-refresh .theme-dark .hljs-subst {
+  color: var(--mu-on-surface-variant);
+}
+
+.visual-refresh.theme-dark .hljs-symbol,
+.visual-refresh .theme-dark .hljs-symbol {
+  color: var(--mu-tertiary);
+}
+
+.visual-refresh.theme-dark .hljs-variable,
+.visual-refresh .theme-dark .hljs-variable {
+  color: var(--mu-on-surface);
+}
+
+.visual-refresh.theme-dark .hljs-variable.language_,
+.visual-refresh .theme-dark .hljs-variable.language_ {
+  color: var(--mu-magenta);
+}
+
+.visual-refresh.theme-dark .hljs-variable.constant_,
+.visual-refresh .theme-dark .hljs-variable.constant_ {
+  color: var(--mu-warning);
+}
+
+.visual-refresh.theme-dark .hljs-title,
+.visual-refresh .theme-dark .hljs-title {
+  color: var(--mu-blue);
+}
+
+.visual-refresh.theme-dark .hljs-title.class_,
+.visual-refresh .theme-dark .hljs-title.class_ {
+  color: var(--mu-warning);
+}
+
+.visual-refresh.theme-dark .hljs-title.function_,
+.visual-refresh .theme-dark .hljs-title.function_ {
+  color: var(--mu-blue);
+}
+
+.visual-refresh.theme-dark .hljs-params,
+.visual-refresh .theme-dark .hljs-params {
+  color: var(--mu-on-surface);
+}
+
+.visual-refresh.theme-dark .hljs-comment,
+.visual-refresh .theme-dark .hljs-comment {
+  color: var(--mu-outline);
+}
+
+.visual-refresh.theme-dark .hljs-doctag,
+.visual-refresh .theme-dark .hljs-doctag {
+  color: var(--mu-error);
+}
+
+.visual-refresh.theme-dark .hljs-meta,
+.visual-refresh .theme-dark .hljs-meta {
+  color: var(--mu-tertiary);
+}
+
+.visual-refresh.theme-dark .hljs-section,
+.visual-refresh .theme-dark .hljs-section {
+  color: var(--mu-blue);
+}
+
+.visual-refresh.theme-dark .hljs-tag,
+.visual-refresh .theme-dark .hljs-tag {
+  color: var(--mu-cyan);
+}
+
+.visual-refresh.theme-dark .hljs-name,
+.visual-refresh .theme-dark .hljs-name {
+  color: var(--mu-magenta);
+}
+
+.visual-refresh.theme-dark .hljs-attr,
+.visual-refresh .theme-dark .hljs-attr {
+  color: var(--mu-blue);
+}
+
+.visual-refresh.theme-dark .hljs-attribute,
+.visual-refresh .theme-dark .hljs-attribute {
+  color: var(--mu-success);
+}
+
+.visual-refresh.theme-dark .hljs-bullet,
+.visual-refresh .theme-dark .hljs-bullet {
+  color: var(--mu-cyan);
+}
+
+.visual-refresh.theme-dark .hljs-code,
+.visual-refresh .theme-dark .hljs-code {
+  color: var(--mu-success);
+}
+
+.visual-refresh.theme-dark .hljs-formula,
+.visual-refresh .theme-dark .hljs-formula {
+  color: var(--mu-cyan);
+}
+
+.visual-refresh.theme-dark .hljs-link,
+.visual-refresh .theme-dark .hljs-link {
+  color: var(--mu-tertiary); font-style: italic;
+}
+
+.visual-refresh.theme-dark .hljs-quote,
+.visual-refresh .theme-dark .hljs-quote {
+  color: var(--mu-success); font-style: italic;
+}
+
+.visual-refresh.theme-dark .hljs-selector-tag,
+.visual-refresh .theme-dark .hljs-selector-tag {
+  color: var(--mu-warning);
+}
+
+.visual-refresh.theme-dark .hljs-selector-id,
+.visual-refresh .theme-dark .hljs-selector-id {
+  color: var(--mu-blue);
+}
+
+.visual-refresh.theme-dark .hljs-selector-class,
+.visual-refresh .theme-dark .hljs-selector-class {
+  color: var(--mu-cyan);
+}
+
+.visual-refresh.theme-dark .hljs-selector-attr,
+.visual-refresh .theme-dark .hljs-selector-attr {
+  color: var(--mu-magenta);
+}
+
+.visual-refresh.theme-dark .hljs-selector-pseudo,
+.visual-refresh .theme-dark .hljs-selector-pseudo {
+  color: var(--mu-cyan);
+}
+
+.visual-refresh.theme-dark .hljs-template-tag,
+.visual-refresh .theme-dark .hljs-template-tag {
+  color: var(--mu-tertiary);
+}
+
+.visual-refresh.theme-dark .hljs-template-variable,
+.visual-refresh .theme-dark .hljs-template-variable {
+  color: var(--mu-tertiary);
+}
+
+.visual-refresh.theme-dark .hljs-addition,
+.visual-refresh .theme-dark .hljs-addition {
+  color: var(--mu-success);
+  background: color-mix(in srgb, var(--mu-success) 15%, transparent);
+}
+
+.visual-refresh.theme-dark .hljs-deletion,
+.visual-refresh .theme-dark .hljs-deletion {
+  color: var(--mu-error);
+  background: color-mix(in srgb, var(--mu-error) 15%, transparent);
+}
+
+.visual-refresh.theme-dark .hljs-strong,
+.visual-refresh .theme-dark .hljs-strong {
+  color: var(--mu-error);
+  font-weight: bold;
+}
+
+.visual-refresh.theme-dark .hljs-emphasis,
+.visual-refresh .theme-dark .hljs-emphasis {
+  color: var(--mu-error);
+  font-style: italic;
+}
+
+/* ===== theme-light ===== */
+
+.visual-refresh.theme-light,
+.visual-refresh .theme-light {
+  --mu-surface-lowest: {{colors.surface_container_lowest.light.hex}};
+  --mu-surface-low: {{colors.surface_container_low.light.hex}};
+  --mu-surface: {{colors.surface_container.light.hex}};
+  --mu-surface-high: {{colors.surface_container_high.light.hex}};
+  --mu-surface-highest: {{colors.surface_container_highest.light.hex}};
+  --mu-on-surface: {{colors.on_surface.light.hex}};
+  --mu-on-surface-variant: {{colors.on_surface_variant.light.hex}};
+  --mu-outline: {{colors.outline.light.hex}};
+  --mu-outline-variant: {{colors.outline_variant.light.hex}};
+  --mu-primary: {{colors.primary.light.hex}};
+  --mu-on-primary: {{colors.on_primary.light.hex}};
+  --mu-primary-container: {{colors.primary_container.light.hex}};
+  --mu-on-primary-container: {{colors.on_primary_container.light.hex}};
+  --mu-secondary: {{colors.secondary.light.hex}};
+  --mu-secondary-container: {{colors.secondary_container.light.hex}};
+  --mu-on-secondary-container: {{colors.on_secondary_container.light.hex}};
+  --mu-tertiary: {{colors.tertiary.light.hex}};
+  --mu-on-tertiary: {{colors.on_tertiary.light.hex}};
+  --mu-error: {{colors.error.light.hex}};
+  --mu-on-error: {{colors.on_error.light.hex}};
+  --mu-error-container: {{colors.error_container.light.hex}};
+  --mu-success: {{colors.success.light.hex}};
+  --mu-on-success: {{colors.on_success.light.hex}};
+  --mu-warning: {{colors.warning.light.hex}};
+  --mu-on-warning: {{colors.on_warning.light.hex}};
+  --mu-blue: {{colors.ansi_blue.light.hex}};
+  --mu-magenta: {{colors.ansi_magenta.light.hex}};
+  --mu-cyan: {{colors.ansi_cyan.light.hex}};
+  --mu-shadow: {{colors.shadow.light.hex}};
+
+  --brand-100: color-mix(in srgb, var(--mu-primary) 10%, white);
+  --brand-130: color-mix(in srgb, var(--mu-primary) 18%, white);
+  --brand-160: color-mix(in srgb, var(--mu-primary) 28%, white);
+  --brand-200: color-mix(in srgb, var(--mu-primary) 38%, white);
+  --brand-230: color-mix(in srgb, var(--mu-primary) 48%, white);
+  --brand-260: color-mix(in srgb, var(--mu-primary) 58%, white);
+  --brand-300: color-mix(in srgb, var(--mu-primary) 68%, white);
+  --brand-330: color-mix(in srgb, var(--mu-primary) 76%, white);
+  --brand-360: color-mix(in srgb, var(--mu-primary) 84%, white);
+  --brand-400: color-mix(in srgb, var(--mu-primary) 90%, white);
+  --brand-430: color-mix(in srgb, var(--mu-primary) 94%, white);
+  --brand-460: color-mix(in srgb, var(--mu-primary) 97%, white);
+  --brand-500: var(--mu-primary);
+  --brand-530: color-mix(in srgb, var(--mu-primary) 94%, black);
+  --brand-560: color-mix(in srgb, var(--mu-primary) 86%, black);
+  --brand-600: color-mix(in srgb, var(--mu-primary) 76%, black);
+  --brand-630: color-mix(in srgb, var(--mu-primary) 66%, black);
+  --brand-660: color-mix(in srgb, var(--mu-primary) 56%, black);
+  --brand-700: color-mix(in srgb, var(--mu-primary) 46%, black);
+  --brand-730: color-mix(in srgb, var(--mu-primary) 40%, black);
+  --brand-760: color-mix(in srgb, var(--mu-primary) 34%, black);
+  --brand-800: color-mix(in srgb, var(--mu-primary) 28%, black);
+  --brand-830: color-mix(in srgb, var(--mu-primary) 22%, black);
+  --brand-860: color-mix(in srgb, var(--mu-primary) 16%, black);
+  --brand-900: color-mix(in srgb, var(--mu-primary) 10%, black);
+  --brand-05a: color-mix(in srgb, var(--mu-primary) 5%, transparent);
+  --brand-10a: color-mix(in srgb, var(--mu-primary) 10%, transparent);
+  --brand-15a: color-mix(in srgb, var(--mu-primary) 15%, transparent);
+  --brand-20a: color-mix(in srgb, var(--mu-primary) 20%, transparent);
+  --brand-25a: color-mix(in srgb, var(--mu-primary) 25%, transparent);
+  --brand-30a: color-mix(in srgb, var(--mu-primary) 30%, transparent);
+  --brand-35a: color-mix(in srgb, var(--mu-primary) 35%, transparent);
+  --brand-40a: color-mix(in srgb, var(--mu-primary) 40%, transparent);
+  --brand-45a: color-mix(in srgb, var(--mu-primary) 45%, transparent);
+  --brand-50a: color-mix(in srgb, var(--mu-primary) 50%, transparent);
+  --brand-55a: color-mix(in srgb, var(--mu-primary) 55%, transparent);
+  --brand-60a: color-mix(in srgb, var(--mu-primary) 60%, transparent);
+  --brand-65a: color-mix(in srgb, var(--mu-primary) 65%, transparent);
+  --brand-70a: color-mix(in srgb, var(--mu-primary) 70%, transparent);
+  --brand-75a: color-mix(in srgb, var(--mu-primary) 75%, transparent);
+  --brand-80a: color-mix(in srgb, var(--mu-primary) 80%, transparent);
+  --brand-85a: color-mix(in srgb, var(--mu-primary) 85%, transparent);
+  --brand-90a: color-mix(in srgb, var(--mu-primary) 90%, transparent);
+  --brand-95a: color-mix(in srgb, var(--mu-primary) 95%, transparent);
+  --__header-bar-background: var(--mu-surface-highest);
+  --app-frame-background: var(--mu-surface-highest);
+  --background-base-lowest: var(--mu-surface-highest);
+  --background-base-lower: var(--mu-surface-high);
+  --background-base-low: var(--mu-surface);
+  --background-surface-high: var(--mu-surface-low);
+  --background-surface-higher: var(--mu-surface);
+  --background-surface-highest: var(--mu-surface-high);
+  --background-secondary-alt: var(--mu-surface);
+  --background-accent: var(--mu-secondary-container);
+  --bg-surface-raised: var(--mu-surface);
+  --background-gradient-highest: var(--mu-surface);
+  --home-background: var(--mu-surface-low);
+  --chat-background: var(--mu-surface-low);
+  --chat-background-default: var(--mu-surface-low);
+  --plum-23: var(--mu-surface-low);
+  --background-code: var(--mu-surface-lowest);
+  --custom-channel-members-bg: var(--mu-surface-high);
+  --custom-status-bubble-background: var(--mu-surface-lowest);
+  --custom-status-bubble-background-color: var(--mu-surface);
+  --card-background-default: var(--mu-surface-high);
+  --channeltextarea-background: var(--mu-surface);
+  --modal-background: var(--mu-surface);
+  --modal-footer-background: var(--mu-surface-high);
+  --user-profile-overlay-background: var(--mu-surface);
+  --user-profile-overlay-background-hover: var(--mu-surface-highest);
+  --input-background-default: var(--mu-surface-lowest);
+  --chat-border: color-mix(in srgb, var(--mu-outline-variant) 50%, transparent);
+  --border-muted: color-mix(in srgb, var(--mu-outline-variant) 60%, transparent);
+  --border-normal: color-mix(in srgb, var(--mu-outline-variant) 80%, transparent);
+  --border-strong: var(--mu-outline-variant);
+  --border-subtle: color-mix(in srgb, var(--mu-outline-variant) 35%, transparent);
+  --text-default: var(--mu-on-surface);
+  --text-strong: var(--mu-on-surface);
+  --text-muted: var(--mu-on-surface-variant);
+  --text-subtle: var(--mu-on-surface-variant);
+  --chat-text-muted: var(--mu-on-surface-variant);
+  --text-link: var(--mu-tertiary);
+  --text-brand: var(--mu-primary);
+  --text-feedback-positive: var(--mu-success);
+  --text-feedback-critical: var(--mu-error);
+  --text-feedback-warning: var(--mu-warning);
+  --text-feedback-info: var(--mu-cyan);
+  --channels-default: var(--mu-on-surface-variant);
+  --channel-icon: var(--mu-on-surface-variant);
+  --channel-text-area-placeholder: color-mix(in srgb, var(--mu-on-surface) 50%, transparent);
+  --input-text-default: var(--mu-on-surface);
+  --input-placeholder-text-default: var(--mu-on-surface-variant);
+  --input-border-default: var(--mu-outline);
+  --logo-primary: var(--mu-on-surface);
+  --white: var(--mu-on-surface);
+  --white-500: var(--mu-on-surface);
+  --black-500: var(--mu-surface-lowest);
+  --primary-100: var(--mu-on-surface-variant);
+  --primary-200: var(--mu-on-surface-variant);
+  --primary-300: var(--mu-on-surface-variant);
+  --primary-400: var(--mu-on-surface-variant);
+  --primary-630: var(--mu-surface-high);
+  --primary-700: var(--mu-surface-highest);
+  --primary-800: var(--mu-surface-lowest);
+  --icon-default: var(--mu-on-surface);
+  --icon-strong: var(--mu-on-surface);
+  --icon-subtle: var(--mu-on-surface-variant);
+  --icon-muted: var(--mu-on-surface-variant);
+  --icon-voice-muted: var(--mu-error);
+  --textbox-markdown-syntax: var(--mu-outline);
+  --interactive-icon-default: var(--mu-on-surface-variant);
+  --interactive-text-default: var(--mu-on-surface-variant);
+  --interactive-icon-hover: var(--mu-on-surface);
+  --interactive-icon-active: var(--mu-on-primary-container);
+  --interactive-text-hover: var(--mu-on-surface);
+  --interactive-text-active: var(--mu-on-primary-container);
+  --interactive-muted: var(--mu-outline);
+  --interactive-background-hover: color-mix(in srgb, var(--mu-on-surface) 8%, transparent);
+  --interactive-background-selected: var(--mu-primary-container);
+  --interactive-background-active: color-mix(in srgb, var(--mu-on-surface) 14%, transparent);
+  --background-mod-muted: color-mix(in srgb, var(--mu-on-surface-variant) 5%, transparent);
+  --background-mod-normal: color-mix(in srgb, var(--mu-on-surface-variant) 10%, transparent);
+  --background-mod-subtle: color-mix(in srgb, var(--mu-on-surface-variant) 16%, transparent);
+  --background-mod-strong: color-mix(in srgb, var(--mu-on-surface-variant) 28%, transparent);
+  --__adaptive-focus-ring-color: var(--mu-primary);
+  --message-reacted-background-default: color-mix(in srgb, var(--mu-primary) 24%, transparent);
+  --message-reacted-text-default: var(--mu-primary);
+  --mention-foreground: var(--mu-primary);
+  --mention-background: color-mix(in srgb, var(--mu-primary) 24%, transparent);
+  --message-mentioned-background-default: color-mix(in srgb, var(--mu-warning) 10%, transparent);
+  --message-mentioned-background-hover: color-mix(in srgb, var(--mu-warning) 8%, transparent);
+  --message-background-hover: color-mix(in srgb, var(--mu-on-surface) 5%, transparent);
+  --message-automod-background-default: color-mix(in srgb, var(--mu-error) 5%, transparent);
+  --message-automod-background-hover: color-mix(in srgb, var(--mu-error) 10%, transparent);
+  --message-highlight-background-default: color-mix(in srgb, var(--mu-primary) 8%, transparent);
+  --message-highlight-background-hover: color-mix(in srgb, var(--mu-primary) 6%, transparent);
+  --spoiler-revealed-background: var(--mu-surface-high);
+  --spoiler-hidden-background: var(--mu-surface-highest);
+  --__spoiler-background-color--hidden: var(--mu-surface-highest);
+  --__spoiler-warning-background-color: color-mix(in srgb, var(--mu-surface-highest) 85%, var(--mu-on-surface));
+  --opacity-blurple-8: color-mix(in srgb, var(--mu-primary) 8%, transparent);
+  --opacity-blurple-16: color-mix(in srgb, var(--mu-primary) 16%, transparent);
+  --opacity-blurple-24: color-mix(in srgb, var(--mu-primary) 24%, transparent);
+  --opacity-blurple-32: color-mix(in srgb, var(--mu-primary) 32%, transparent);
+  --opacity-blurple-60: color-mix(in srgb, var(--mu-primary) 60%, transparent);
+  --blurple-50: var(--mu-primary);
+  --blurple-60: color-mix(in srgb, var(--mu-primary) 85%, var(--mu-on-surface));
+  --background-feedback-positive: color-mix(in srgb, var(--mu-success) 15%, transparent);
+  --icon-feedback-positive: var(--mu-success);
+  --background-feedback-warning: color-mix(in srgb, var(--mu-warning) 15%, transparent);
+  --icon-feedback-warning: var(--mu-warning);
+  --background-feedback-critical: color-mix(in srgb, var(--mu-error) 15%, transparent);
+  --icon-feedback-critical: var(--mu-error);
+  --background-feedback-info: color-mix(in srgb, var(--mu-cyan) 15%, transparent);
+  --icon-feedback-info: var(--mu-cyan);
+  --background-feedback-notification: var(--mu-error);
+  --icon-feedback-notification: var(--mu-error);
+  --badge-notification-background: var(--mu-error);
+  --status-positive: var(--mu-success);
+  --status-positive-background: var(--mu-success);
+  --status-positive-text: var(--mu-on-success);
+  --status-warning: var(--mu-warning);
+  --status-warning-background: var(--mu-warning);
+  --status-warning-text: var(--mu-on-warning);
+  --status-danger: var(--mu-error);
+  --green-360: var(--mu-success);
+  --green-300: var(--mu-success);
+  --yellow-360: var(--mu-warning);
+  --yellow-300: var(--mu-warning);
+  --red-400: var(--mu-error);
+  --red-430: color-mix(in srgb, var(--mu-error) 88%, var(--mu-on-surface));
+  --red-500: color-mix(in srgb, var(--mu-error) 76%, var(--mu-on-surface));
+  --blue-500: var(--mu-blue);
+  --blue-530: color-mix(in srgb, var(--mu-blue) 88%, var(--mu-on-surface));
+  --text-status-online: var(--mu-success);
+  --icon-status-online: var(--mu-success);
+  --text-status-idle: var(--mu-warning);
+  --icon-status-idle: var(--mu-warning);
+  --text-status-dnd: var(--mu-error);
+  --icon-status-dnd: var(--mu-error);
+  --text-status-offline: var(--mu-outline);
+  --icon-status-offline: var(--mu-outline);
+  --twitch: var(--mu-magenta);
+  --playstation: var(--mu-blue);
+  --spotify: var(--mu-success);
+  --notice-background-critical: var(--mu-error);
+  --notice-text-critical: var(--mu-on-error);
+  --notice-background-info: var(--mu-primary);
+  --notice-text-info: var(--mu-on-primary);
+  --notice-background-positive: var(--mu-success);
+  --notice-text-positive: var(--mu-on-success);
+  --notice-background-warning: var(--mu-warning);
+  --notice-text-warning: var(--mu-on-warning);
+  --badge-text-brand: var(--mu-on-primary);
+  --checkbox-icon-active: var(--mu-on-primary);
+  --radio-thumb-background-active: var(--mu-on-primary);
+  --checkbox-border-default: var(--mu-outline);
+  --guild-boosting-pink: var(--mu-magenta);
+  --guild-boosting-blue: var(--mu-blue);
+  --guild-boosting-purple: var(--mu-tertiary);
+  --premium-perk-yellow: var(--mu-warning);
+  --premium-perk-purple: var(--mu-magenta);
+  --premium-perk-dark-blue: color-mix(in srgb, var(--mu-blue) 85%, var(--mu-on-surface));
+  --premium-perk-light-blue: var(--mu-cyan);
+  --premium-perk-blue: var(--mu-blue);
+  --premium-perk-green: var(--mu-success);
+  --premium-perk-pink: var(--mu-magenta);
+  --premium-perk-orange: color-mix(in srgb, var(--mu-warning) 60%, var(--mu-error));
+  --premium-tier-0-blue: var(--mu-blue);
+  --premium-tier-0-purple: var(--mu-magenta);
+  --premium-tier-1-blue-for-gradients: var(--mu-cyan);
+  --premium-tier-1-dark-blue-for-gradients: var(--mu-blue);
+  --premium-tier-2-purple-for-gradients: color-mix(in srgb, var(--mu-magenta) 85%, var(--mu-on-surface));
+  --premium-tier-2-purple-for-gradients-2: var(--mu-magenta);
+  --premium-tier-2-pink-for-gradients: var(--mu-magenta);
+  --control-primary-background-default: var(--mu-primary);
+  --control-primary-background-hover: color-mix(in srgb, var(--mu-primary) 88%, var(--mu-on-surface));
+  --control-primary-background-active: color-mix(in srgb, var(--mu-primary) 76%, var(--mu-on-surface));
+  --control-secondary-background-default: var(--mu-secondary-container);
+  --control-secondary-background-hover: color-mix(in srgb, var(--mu-secondary-container) 88%, var(--mu-on-secondary-container));
+  --control-secondary-background-active: color-mix(in srgb, var(--mu-secondary-container) 78%, var(--mu-on-secondary-container));
+  --control-secondary-border-default: var(--mu-outline-variant);
+  --control-secondary-text-default: var(--mu-on-secondary-container);
+  --control-secondary-text-hover: var(--mu-on-secondary-container);
+  --control-critical-primary-background-default: var(--mu-error);
+  --control-critical-primary-background-hover: color-mix(in srgb, var(--mu-error) 88%, var(--mu-on-surface));
+  --control-critical-primary-background-active: color-mix(in srgb, var(--mu-error) 76%, var(--mu-on-surface));
+  --control-critical-primary-text-default: var(--mu-on-error);
+  --control-critical-primary-text-hover: var(--mu-on-error);
+  --control-critical-secondary-background-default: transparent;
+  --control-critical-secondary-background-hover: var(--mu-error);
+  --control-critical-secondary-background-active: color-mix(in srgb, var(--mu-error) 88%, var(--mu-on-surface));
+  --control-critical-secondary-border-default: var(--mu-error);
+  --control-critical-secondary-border-hover: var(--mu-error);
+  --control-critical-secondary-border-active: var(--mu-error);
+  --control-critical-secondary-text-default: var(--mu-on-surface);
+  --control-critical-secondary-text-hover: var(--mu-on-error);
+  --control-critical-secondary-text-active: var(--mu-on-error);
+  --control-connected-background-default: var(--mu-success);
+  --control-connected-background-hover: color-mix(in srgb, var(--mu-success) 88%, var(--mu-on-surface));
+  --control-connected-background-active: color-mix(in srgb, var(--mu-success) 76%, var(--mu-on-surface));
+  --control-connected-border-default: var(--mu-success);
+  --control-connected-border-hover: var(--mu-success);
+  --control-connected-border-active: var(--mu-success);
+  --control-brand-foreground: var(--mu-primary);
+  --control-brand-foreground-new: var(--mu-primary);
+  --button-outline-primary-text: var(--mu-on-surface);
+  --button-outline-brand-text: var(--mu-on-surface);
+  --button-outline-brand-background-hover: color-mix(in srgb, var(--mu-primary) 88%, var(--mu-on-surface));
+  --button-outline-brand-border-active: color-mix(in srgb, var(--mu-primary) 88%, var(--mu-on-surface));
+  --scrollbar-thin-thumb: color-mix(in srgb, var(--mu-outline) 60%, transparent);
+  --scrollbar-auto-thumb: color-mix(in srgb, var(--mu-outline) 60%, transparent);
+  --scrollbar-auto-scrollbar-color-thumb: color-mix(in srgb, var(--mu-outline) 60%, transparent);
+  --scrollbar-thin-track: transparent;
+  --scrollbar-auto-track: transparent;
+  --scrollbar-auto-scrollbar-color-track: transparent;
+}
+
+.visual-refresh.theme-light ::selection,
+.visual-refresh .theme-light ::selection {
+  background-color: var(--mu-primary-container);
+  color: var(--mu-on-primary-container);
+}
+
+.visual-refresh.theme-light div[class^=numberBadge_],
+.visual-refresh .theme-light div[class^=numberBadge_],
+.visual-refresh.theme-light div[class*=iconBadge_][class*=isCurrentUserConnected_],
+.visual-refresh .theme-light div[class*=iconBadge_][class*=isCurrentUserConnected_],
+.visual-refresh.theme-light span[class*=botTag_],
+.visual-refresh .theme-light span[class*=botTag_],
+.visual-refresh.theme-light span[class^=unreadPill_],
+.visual-refresh .theme-light span[class^=unreadPill_],
+.visual-refresh.theme-light div[class^=newBadge_],
+.visual-refresh .theme-light div[class^=newBadge_],
+.visual-refresh.theme-light div[class*=textBadge_][class*=base_],
+.visual-refresh .theme-light div[class*=textBadge_][class*=base_],
+.visual-refresh.theme-light button[class*=button_][class*=lookFilled_][class*=colorRed_],
+.visual-refresh .theme-light button[class*=button_][class*=lookFilled_][class*=colorRed_],
+.visual-refresh.theme-light button[class*=button_][class*=lookFilled_][class*=colorGreen_],
+.visual-refresh .theme-light button[class*=button_][class*=lookFilled_][class*=colorGreen_],
+.visual-refresh.theme-light button[class*=button_][class*=lookFilled_][class*=colorLink_],
+.visual-refresh .theme-light button[class*=button_][class*=lookFilled_][class*=colorLink_],
+.visual-refresh.theme-light button[class*=button_][class*=lookFilled_][class*=colorBrand_],
+.visual-refresh .theme-light button[class*=button_][class*=lookFilled_][class*=colorBrand_],
+.visual-refresh.theme-light button[class*=colorable_][class*=join_],
+.visual-refresh .theme-light button[class*=colorable_][class*=join_],
+.visual-refresh.theme-light div[class*=tooltipBrand_],
+.visual-refresh .theme-light div[class*=tooltipBrand_],
+.visual-refresh.theme-light div[class*=tooltipGreen_],
+.visual-refresh .theme-light div[class*=tooltipGreen_],
+.visual-refresh.theme-light div[class*=memberCount_],
+.visual-refresh .theme-light div[class*=memberCount_],
+.visual-refresh.theme-light div[class*=nowPlaying_],
+.visual-refresh .theme-light div[class*=nowPlaying_],
+.visual-refresh.theme-light [class*=notice_][class*=colorBrand_],
+.visual-refresh .theme-light [class*=notice_][class*=colorBrand_],
+.visual-refresh.theme-light [class*=colorStreamerMode_],
+.visual-refresh .theme-light [class*=colorStreamerMode_],
+.visual-refresh.theme-light [class*=colorSpotify_],
+.visual-refresh .theme-light [class*=colorSpotify_],
+.visual-refresh.theme-light [class*=colorPremium_],
+.visual-refresh .theme-light [class*=colorPremium_],
+.visual-refresh.theme-light [class*=colorPlayStation_],
+.visual-refresh .theme-light [class*=colorPlayStation_] {
+  --white: var(--mu-on-primary);
+  --white-500: var(--mu-on-primary);
+}
+
+.visual-refresh.theme-light button[class*=button_][class*=lookFilled_][class*=colorBrand_]:not(:has(>div>div[class*=buttonIcon_])),
+.visual-refresh .theme-light button[class*=button_][class*=lookFilled_][class*=colorBrand_]:not(:has(>div>div[class*=buttonIcon_])) {
+  color: var(--mu-on-primary) !important;
+}
+
+.visual-refresh.theme-light button.vc-btn-primary,
+.visual-refresh .theme-light button.vc-btn-primary,
+.visual-refresh.theme-light button[class^=button_][class*=" primary_"],
+.visual-refresh .theme-light button[class^=button_][class*=" primary_"] {
+  color: var(--mu-on-primary) !important;
+  background-color: var(--mu-primary) !important;
+}
+
+.visual-refresh.theme-light button.vc-btn-primary:hover,
+.visual-refresh .theme-light button.vc-btn-primary:hover,
+.visual-refresh.theme-light button[class^=button_][class*=" primary_"]:hover,
+.visual-refresh .theme-light button[class^=button_][class*=" primary_"]:hover {
+  background-color: color-mix(in srgb, var(--mu-primary) 88%, var(--mu-on-surface)) !important;
+}
+
+.visual-refresh.theme-light button.vc-btn-primary:active,
+.visual-refresh .theme-light button.vc-btn-primary:active,
+.visual-refresh.theme-light button[class^=button_][class*=" primary_"]:active,
+.visual-refresh .theme-light button[class^=button_][class*=" primary_"]:active {
+  background-color: color-mix(in srgb, var(--mu-primary) 76%, var(--mu-on-surface)) !important;
+}
+
+.visual-refresh.theme-light [style*="color: white"],
+.visual-refresh .theme-light [style*="color: white"] {
+  color: var(--white) !important;
+}
+
+.visual-refresh.theme-light div[class*=button_][class*=dangerous_],
+.visual-refresh .theme-light div[class*=button_][class*=dangerous_] {
+  color: var(--mu-error);
+}
+
+.visual-refresh.theme-light div[class^=newMessagesBar_],
+.visual-refresh .theme-light div[class^=newMessagesBar_] {
+  --white: var(--mu-on-primary);
+  --control-secondary-background-default: var(--brand-500);
+  --control-secondary-background-hover: var(--brand-530);
+}
+
+.visual-refresh.theme-light svg [fill="#45a366"],
+.visual-refresh .theme-light svg [fill="#45a366"],
+.visual-refresh.theme-light svg[fill="#45a366"],
+.visual-refresh .theme-light svg[fill="#45a366"] {
+  fill: var(--mu-success);
+}
+
+.visual-refresh.theme-light div[style="background-color: rgb(69, 163, 102);"],
+.visual-refresh .theme-light div[style="background-color: rgb(69, 163, 102);"] {
+  background-color: var(--mu-success) !important;
+}
+
+.visual-refresh.theme-light svg [fill="#ffc04e"],
+.visual-refresh .theme-light svg [fill="#ffc04e"],
+.visual-refresh.theme-light svg[fill="#ffc04e"],
+.visual-refresh .theme-light svg[fill="#ffc04e"] {
+  fill: var(--mu-warning);
+}
+
+.visual-refresh.theme-light div[style="background-color: rgb(255, 192, 78);"],
+.visual-refresh .theme-light div[style="background-color: rgb(255, 192, 78);"] {
+  background-color: var(--mu-warning) !important;
+}
+
+.visual-refresh.theme-light svg [fill="#da3e44"],
+.visual-refresh .theme-light svg [fill="#da3e44"],
+.visual-refresh.theme-light svg[fill="#da3e44"],
+.visual-refresh .theme-light svg[fill="#da3e44"] {
+  fill: var(--mu-error);
+}
+
+.visual-refresh.theme-light div[style="background-color: rgb(218, 62, 68);"],
+.visual-refresh .theme-light div[style="background-color: rgb(218, 62, 68);"] {
+  background-color: var(--mu-error) !important;
+}
+
+.visual-refresh.theme-light svg [fill="#84858d"],
+.visual-refresh .theme-light svg [fill="#84858d"],
+.visual-refresh.theme-light svg[fill="#84858d"],
+.visual-refresh .theme-light svg[fill="#84858d"] {
+  fill: var(--mu-outline);
+}
+
+.visual-refresh.theme-light div[style="background-color: rgb(132, 133, 141);"],
+.visual-refresh .theme-light div[style="background-color: rgb(132, 133, 141);"] {
+  background-color: var(--mu-outline) !important;
+}
+
+.visual-refresh.theme-light svg [fill="#9147ff"],
+.visual-refresh .theme-light svg [fill="#9147ff"],
+.visual-refresh.theme-light svg[fill="#9147ff"],
+.visual-refresh .theme-light svg[fill="#9147ff"] {
+  fill: var(--mu-magenta);
+}
+
+.visual-refresh.theme-light div[style="background-color: rgb(145, 71, 255);"],
+.visual-refresh .theme-light div[style="background-color: rgb(145, 71, 255);"] {
+  background-color: var(--mu-magenta) !important;
+}
+
+.visual-refresh.theme-light label[class^=container_]>div[data-mana-component=switch],
+.visual-refresh .theme-light label[class^=container_]>div[data-mana-component=switch] {
+  background-color: var(--mu-outline-variant) !important;
+  border: unset !important;
+  transition: background-color .2s;
+}
+
+.visual-refresh.theme-light label[class^=container_]>div[data-mana-component=switch]:hover,
+.visual-refresh .theme-light label[class^=container_]>div[data-mana-component=switch]:hover {
+  background-color: color-mix(in srgb, var(--mu-outline-variant) 80%, var(--mu-on-surface)) !important;
+}
+
+.visual-refresh.theme-light label[class^=container_]>div[data-mana-component=switch]>svg>rect,
+.visual-refresh .theme-light label[class^=container_]>div[data-mana-component=switch]>svg>rect {
+  fill: var(--mu-surface-lowest);
+  transition: fill .2s;
+}
+
+.visual-refresh.theme-light label[class^=container_]>div[data-mana-component=switch]:has(+span>input:checked),
+.visual-refresh .theme-light label[class^=container_]>div[data-mana-component=switch]:has(+span>input:checked) {
+  background-color: var(--mu-primary) !important;
+}
+
+.visual-refresh.theme-light label[class^=container_]>div[data-mana-component=switch]:has(+span>input:checked):hover,
+.visual-refresh .theme-light label[class^=container_]>div[data-mana-component=switch]:has(+span>input:checked):hover {
+  background-color: color-mix(in srgb, var(--mu-primary) 88%, var(--mu-on-surface)) !important;
+}
+
+.visual-refresh.theme-light label[class^=container_]>div[data-mana-component=switch]:has(+span>input:checked)>svg>rect,
+.visual-refresh .theme-light label[class^=container_]>div[data-mana-component=switch]:has(+span>input:checked)>svg>rect {
+  fill: var(--mu-on-primary);
+}
+
+.visual-refresh.theme-light div.vc-switch-container,
+.visual-refresh .theme-light div.vc-switch-container {
+  --primary-400: var(--mu-outline-variant);
+}
+
+.visual-refresh.theme-light div.vc-switch-container svg.vc-switch-slider>rect,
+.visual-refresh .theme-light div.vc-switch-container svg.vc-switch-slider>rect {
+  fill: var(--mu-surface-lowest);
+  transition: fill .2s;
+}
+
+.visual-refresh.theme-light div.vc-switch-container.vc-switch-checked>svg.vc-switch-slider>rect,
+.visual-refresh .theme-light div.vc-switch-container.vc-switch-checked>svg.vc-switch-slider>rect {
+  fill: var(--mu-on-primary);
+}
+
+.visual-refresh.theme-light.hljs,
+.visual-refresh .theme-light.hljs {
+  color: var(--mu-on-surface);
+  background: var(--mu-surface-lowest);
+}
+
+.visual-refresh.theme-light .hljs-keyword,
+.visual-refresh .theme-light .hljs-keyword {
+  color: var(--mu-magenta);
+}
+
+.visual-refresh.theme-light .hljs-built_in,
+.visual-refresh .theme-light .hljs-built_in {
+  color: var(--mu-error);
+}
+
+.visual-refresh.theme-light .hljs-type,
+.visual-refresh .theme-light .hljs-type {
+  color: var(--mu-warning);
+}
+
+.visual-refresh.theme-light .hljs-literal,
+.visual-refresh .theme-light .hljs-literal {
+  color: var(--mu-warning);
+}
+
+.visual-refresh.theme-light .hljs-number,
+.visual-refresh .theme-light .hljs-number {
+  color: var(--mu-warning);
+}
+
+.visual-refresh.theme-light .hljs-operator,
+.visual-refresh .theme-light .hljs-operator {
+  color: var(--mu-cyan);
+}
+
+.visual-refresh.theme-light .hljs-punctuation,
+.visual-refresh .theme-light .hljs-punctuation {
+  color: var(--mu-on-surface-variant);
+}
+
+.visual-refresh.theme-light .hljs-property,
+.visual-refresh .theme-light .hljs-property {
+  color: var(--mu-cyan);
+}
+
+.visual-refresh.theme-light .hljs-regexp,
+.visual-refresh .theme-light .hljs-regexp {
+  color: var(--mu-magenta);
+}
+
+.visual-refresh.theme-light .hljs-string,
+.visual-refresh .theme-light .hljs-string {
+  color: var(--mu-success);
+}
+
+.visual-refresh.theme-light .hljs-char.escape_,
+.visual-refresh .theme-light .hljs-char.escape_ {
+  color: var(--mu-cyan);
+}
+
+.visual-refresh.theme-light .hljs-subst,
+.visual-refresh .theme-light .hljs-subst {
+  color: var(--mu-on-surface-variant);
+}
+
+.visual-refresh.theme-light .hljs-symbol,
+.visual-refresh .theme-light .hljs-symbol {
+  color: var(--mu-tertiary);
+}
+
+.visual-refresh.theme-light .hljs-variable,
+.visual-refresh .theme-light .hljs-variable {
+  color: var(--mu-on-surface);
+}
+
+.visual-refresh.theme-light .hljs-variable.language_,
+.visual-refresh .theme-light .hljs-variable.language_ {
+  color: var(--mu-magenta);
+}
+
+.visual-refresh.theme-light .hljs-variable.constant_,
+.visual-refresh .theme-light .hljs-variable.constant_ {
+  color: var(--mu-warning);
+}
+
+.visual-refresh.theme-light .hljs-title,
+.visual-refresh .theme-light .hljs-title {
+  color: var(--mu-blue);
+}
+
+.visual-refresh.theme-light .hljs-title.class_,
+.visual-refresh .theme-light .hljs-title.class_ {
+  color: var(--mu-warning);
+}
+
+.visual-refresh.theme-light .hljs-title.function_,
+.visual-refresh .theme-light .hljs-title.function_ {
+  color: var(--mu-blue);
+}
+
+.visual-refresh.theme-light .hljs-params,
+.visual-refresh .theme-light .hljs-params {
+  color: var(--mu-on-surface);
+}
+
+.visual-refresh.theme-light .hljs-comment,
+.visual-refresh .theme-light .hljs-comment {
+  color: var(--mu-outline);
+}
+
+.visual-refresh.theme-light .hljs-doctag,
+.visual-refresh .theme-light .hljs-doctag {
+  color: var(--mu-error);
+}
+
+.visual-refresh.theme-light .hljs-meta,
+.visual-refresh .theme-light .hljs-meta {
+  color: var(--mu-tertiary);
+}
+
+.visual-refresh.theme-light .hljs-section,
+.visual-refresh .theme-light .hljs-section {
+  color: var(--mu-blue);
+}
+
+.visual-refresh.theme-light .hljs-tag,
+.visual-refresh .theme-light .hljs-tag {
+  color: var(--mu-cyan);
+}
+
+.visual-refresh.theme-light .hljs-name,
+.visual-refresh .theme-light .hljs-name {
+  color: var(--mu-magenta);
+}
+
+.visual-refresh.theme-light .hljs-attr,
+.visual-refresh .theme-light .hljs-attr {
+  color: var(--mu-blue);
+}
+
+.visual-refresh.theme-light .hljs-attribute,
+.visual-refresh .theme-light .hljs-attribute {
+  color: var(--mu-success);
+}
+
+.visual-refresh.theme-light .hljs-bullet,
+.visual-refresh .theme-light .hljs-bullet {
+  color: var(--mu-cyan);
+}
+
+.visual-refresh.theme-light .hljs-code,
+.visual-refresh .theme-light .hljs-code {
+  color: var(--mu-success);
+}
+
+.visual-refresh.theme-light .hljs-formula,
+.visual-refresh .theme-light .hljs-formula {
+  color: var(--mu-cyan);
+}
+
+.visual-refresh.theme-light .hljs-link,
+.visual-refresh .theme-light .hljs-link {
+  color: var(--mu-tertiary); font-style: italic;
+}
+
+.visual-refresh.theme-light .hljs-quote,
+.visual-refresh .theme-light .hljs-quote {
+  color: var(--mu-success); font-style: italic;
+}
+
+.visual-refresh.theme-light .hljs-selector-tag,
+.visual-refresh .theme-light .hljs-selector-tag {
+  color: var(--mu-warning);
+}
+
+.visual-refresh.theme-light .hljs-selector-id,
+.visual-refresh .theme-light .hljs-selector-id {
+  color: var(--mu-blue);
+}
+
+.visual-refresh.theme-light .hljs-selector-class,
+.visual-refresh .theme-light .hljs-selector-class {
+  color: var(--mu-cyan);
+}
+
+.visual-refresh.theme-light .hljs-selector-attr,
+.visual-refresh .theme-light .hljs-selector-attr {
+  color: var(--mu-magenta);
+}
+
+.visual-refresh.theme-light .hljs-selector-pseudo,
+.visual-refresh .theme-light .hljs-selector-pseudo {
+  color: var(--mu-cyan);
+}
+
+.visual-refresh.theme-light .hljs-template-tag,
+.visual-refresh .theme-light .hljs-template-tag {
+  color: var(--mu-tertiary);
+}
+
+.visual-refresh.theme-light .hljs-template-variable,
+.visual-refresh .theme-light .hljs-template-variable {
+  color: var(--mu-tertiary);
+}
+
+.visual-refresh.theme-light .hljs-addition,
+.visual-refresh .theme-light .hljs-addition {
+  color: var(--mu-success);
+  background: color-mix(in srgb, var(--mu-success) 15%, transparent);
+}
+
+.visual-refresh.theme-light .hljs-deletion,
+.visual-refresh .theme-light .hljs-deletion {
+  color: var(--mu-error);
+  background: color-mix(in srgb, var(--mu-error) 15%, transparent);
+}
+
+.visual-refresh.theme-light .hljs-strong,
+.visual-refresh .theme-light .hljs-strong {
+  color: var(--mu-error);
+  font-weight: bold;
+}
+
+.visual-refresh.theme-light .hljs-emphasis,
+.visual-refresh .theme-light .hljs-emphasis {
+  color: var(--mu-error);
+  font-style: italic;
+}
+

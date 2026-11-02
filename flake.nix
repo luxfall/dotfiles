@@ -1,46 +1,41 @@
 {
-	description = "My NixOS Config";
+    description = "NixOS configuration";
 
-	inputs = {
-		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    inputs = {
+        nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+        flake-parts.url = "github:hercules-ci/flake-parts";
 
-		home-manager = {
-			url = "github:nix-community/home-manager";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
+        disko = {
+            url = "github:nix-community/disko";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
 
-		nixos-wsl = {
-			url = "github:nix-community/NixOS-WSL/main";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
-	};
+        nixos-wsl = {
+            url = "github:nix-community/NixOS-WSL/main";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
 
-	outputs = { nixpkgs, home-manager, nixos-wsl, ... }@inputs:
-		let
-		username = "luxfall";
+        nix-index-database = {
+            url = "github:Mic92/nix-index-database";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
 
-	mkHost = hostName: extraModules:
-		nixpkgs.lib.nixosSystem {
-			system = "x86_64-linux";
-			specialArgs = { inherit inputs username hostName; };
-			modules = [
-				./hosts/${hostName}
-			home-manager.nixosModules.home-manager
-			{
-				home-manager = {
-					useGlobalPkgs = true;
-					useUserPackages = true;
-					extraSpecialArgs = { inherit inputs username hostName; };
-					sharedModules = [ ./modules/home/dotfiles.nix ];
-					users.${username} = import ./hosts/${hostName}/home.nix;
-				};
-			}
-			] ++ extraModules;
-		};
-	in
-	{
-		nixosConfigurations = {
-			wsl = mkHost "wsl" [ nixos-wsl.nixosModules.default ];
-		};
-	};
+        wrappers.url = "github:Lassulus/wrappers";
+
+        noctalia = {
+            url = "github:noctalia-dev/noctalia-shell";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+
+        # hyprland.url = "github:hyprwm/Hyprland";
+    };
+
+    outputs = inputs: let
+    inherit (inputs.nixpkgs) lib;
+    inherit (lib.fileset) toList fileFilter;
+    isNixModule = file: file.hasExt "nix" && file.name != "flake.nix" && !lib.hasPrefix "_" file.name;
+    importTree = path: toList (fileFilter isNixModule path);
+    mkFlake = inputs.flake-parts.lib.mkFlake {inherit inputs;};
+    in
+    mkFlake {imports = importTree ./.;};
 }

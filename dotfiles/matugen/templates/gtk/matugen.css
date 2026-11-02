@@ -1,0 +1,125 @@
+
+/* Material palette */
+@define-color mu_surface_lowest {{colors.surface_container_lowest.default.hex}};
+@define-color mu_surface_low {{colors.surface_container_low.default.hex}};
+@define-color mu_surface {{colors.surface_container.default.hex}};
+@define-color mu_surface_high {{colors.surface_container_high.default.hex}};
+@define-color mu_surface_highest {{colors.surface_container_highest.default.hex}};
+@define-color mu_on_surface {{colors.on_surface.default.hex}};
+@define-color mu_on_surface_variant {{colors.on_surface_variant.default.hex}};
+@define-color mu_outline {{colors.outline.default.hex}};
+@define-color mu_outline_variant {{colors.outline_variant.default.hex}};
+@define-color mu_primary {{colors.primary.default.hex}};
+@define-color mu_on_primary {{colors.on_primary.default.hex}};
+@define-color mu_primary_container {{colors.primary_container.default.hex}};
+@define-color mu_on_primary_container {{colors.on_primary_container.default.hex}};
+@define-color mu_secondary_container {{colors.secondary_container.default.hex}};
+@define-color mu_on_secondary_container {{colors.on_secondary_container.default.hex}};
+@define-color mu_tertiary {{colors.tertiary.default.hex}};
+@define-color mu_error {{colors.error.default.hex}};
+@define-color mu_on_error {{colors.on_error.default.hex}};
+@define-color mu_success {{colors.success.default.hex}};
+@define-color mu_on_success {{colors.on_success.default.hex}};
+@define-color mu_warning {{colors.warning.default.hex}};
+@define-color mu_on_warning {{colors.on_warning.default.hex}};
+@define-color mu_inverse_surface {{colors.inverse_surface.default.hex}};
+@define-color mu_inverse_on_surface {{colors.inverse_on_surface.default.hex}};
+@define-color mu_shadow {{colors.shadow.default.hex}};
+
+/* Accent and semantic colors */
+@define-color accent_color @mu_primary;
+@define-color accent_bg_color @mu_primary;
+@define-color accent_fg_color @mu_on_primary;
+@define-color destructive_color @mu_error;
+@define-color destructive_bg_color @mu_error;
+@define-color destructive_fg_color @mu_on_error;
+@define-color error_color @mu_error;
+@define-color error_bg_color @mu_error;
+@define-color error_fg_color @mu_on_error;
+@define-color success_color @mu_success;
+@define-color success_bg_color @mu_success;
+@define-color success_fg_color @mu_on_success;
+@define-color warning_color @mu_warning;
+@define-color warning_bg_color @mu_warning;
+@define-color warning_fg_color @mu_on_warning;
+
+/* Window and content */
+@define-color window_bg_color @mu_surface_high;
+@define-color window_fg_color @mu_on_surface;
+@define-color view_bg_color @mu_surface_low;
+@define-color view_fg_color @mu_on_surface;
+
+/* Header bars: one step above the window; unfocused ones fall back to the window color */
+@define-color headerbar_bg_color @mu_surface_highest;
+@define-color headerbar_fg_color @mu_on_surface;
+@define-color headerbar_border_color @mu_outline_variant;
+@define-color headerbar_backdrop_color @mu_surface_high;
+@define-color headerbar_shade_color alpha(@mu_shadow, 0.25);
+@define-color headerbar_darker_shade_color alpha(@mu_shadow, 0.5);
+
+/* Sidebars: sunken relative to the window */
+@define-color sidebar_bg_color @mu_surface;
+@define-color sidebar_fg_color @mu_on_surface;
+@define-color sidebar_backdrop_color @mu_surface_low;
+@define-color sidebar_border_color alpha(@mu_shadow, 0.25);
+@define-color sidebar_shade_color alpha(@mu_shadow, 0.25);
+@define-color secondary_sidebar_bg_color @mu_surface_low;
+@define-color secondary_sidebar_fg_color @mu_on_surface;
+@define-color secondary_sidebar_backdrop_color @mu_surface_lowest;
+@define-color secondary_sidebar_border_color alpha(@mu_shadow, 0.25);
+@define-color secondary_sidebar_shade_color alpha(@mu_shadow, 0.25);
+
+/* Cards, dialogs, popovers: raised above the window */
+@define-color card_bg_color @mu_surface_highest;
+@define-color card_fg_color @mu_on_surface;
+@define-color card_shade_color alpha(@mu_shadow, 0.2);
+@define-color thumbnail_bg_color @mu_surface_highest;
+@define-color thumbnail_fg_color @mu_on_surface;
+@define-color dialog_bg_color @mu_surface_high;
+@define-color dialog_fg_color @mu_on_surface;
+@define-color popover_bg_color @mu_surface_highest;
+@define-color popover_fg_color @mu_on_surface;
+@define-color popover_shade_color alpha(@mu_shadow, 0.15);
+
+/* Misc */
+@define-color shade_color alpha(@mu_shadow, 0.25);
+@define-color scrollbar_outline_color @mu_surface_lowest;
+
+/* Legacy GTK3/Adwaita names, for apps and themes that do not use the libadwaita ones */
+@define-color theme_bg_color @window_bg_color;
+@define-color theme_fg_color @window_fg_color;
+@define-color theme_base_color @view_bg_color;
+@define-color theme_text_color @view_fg_color;
+@define-color theme_selected_bg_color @accent_bg_color;
+@define-color theme_selected_fg_color @accent_fg_color;
+@define-color theme_unfocused_bg_color @window_bg_color;
+@define-color theme_unfocused_fg_color @window_fg_color;
+@define-color theme_unfocused_base_color @view_bg_color;
+@define-color theme_unfocused_text_color @view_fg_color;
+@define-color theme_unfocused_selected_bg_color @accent_bg_color;
+@define-color theme_unfocused_selected_fg_color @accent_fg_color;
+@define-color insensitive_bg_color mix(@window_bg_color, @view_bg_color, 0.4);
+@define-color insensitive_fg_color alpha(@window_fg_color, 0.5);
+@define-color insensitive_base_color @view_bg_color;
+@define-color borders alpha(@mu_outline_variant, 0.6);
+@define-color unfocused_borders alpha(@mu_outline_variant, 0.4);
+@define-color content_view_bg @view_bg_color;
+@define-color text_view_bg @view_bg_color;
+
+/* Text selection: same container pair as Dolphin's selection */
+selection {
+  background-color: @mu_primary_container;
+  color: @mu_on_primary_container;
+}
+
+/* Tooltips: inverse surface, like the KDE tooltips */
+tooltip,
+tooltip.background {
+  background-color: @mu_inverse_surface;
+  color: @mu_inverse_on_surface;
+}
+
+tooltip label {
+  color: @mu_inverse_on_surface;
+}
+

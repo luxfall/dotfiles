@@ -1,0 +1,15 @@
+partial alphanumeric_keys
+xkb_symbols "custom" {
+
+  include "us"
+  include "eu"
+
+  // Swap Z (AB01) and Y (AD06) for QWERTZ layout
+  key <AD06> { [ z, Z ] };  // Original Y key -> Z
+  key <AB01> { [ y, Y ] };  // Original Z key -> Y
+
+  // Remap Caps Lock to Left Control
+  key <CAPS> { [ Control_L ] };
+  modifier_map Control { <CAPS>, <LCTL> };
+
+};

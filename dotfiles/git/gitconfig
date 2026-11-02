@@ -1,0 +1,24 @@
+
+[include]
+    path = ~/.gitconfig.local
+
+[core]
+    preloadindex = true
+    excludesFile = ~/.gitignore_global
+
+[push]
+    autoSetupRemote = true
+    default = current
+    followTags = true
+
+[pull]
+    default = current
+    rebase = true
+
+[rebase]
+    autoStash = true
+    missingCommitsCheck = warn
+
+[rerere]
+	enabled = true
+
